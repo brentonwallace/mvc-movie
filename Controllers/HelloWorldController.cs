@@ -30,6 +30,12 @@ namespace mvc_movie.Controllers
             return "This is the Welcome action method...";
         }
 
+        
+
+        public int Number()         /* GET https://localhost:#####/HelloWorld/Number/   in address bar -- assuming some these methods can be called through the UI by way of link - now i get it  */
+        {
+            return 99;
+        }
 
     }
 }
