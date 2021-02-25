@@ -5,4 +5,8 @@
     <RootNamespace>mvc_movie</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.3" />
+  </ItemGroup>
+
 </Project>
