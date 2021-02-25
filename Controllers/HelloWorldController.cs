@@ -15,9 +15,12 @@ namespace mvc_movie.Controllers
 
 
 
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is my default action...";
+            //return "This is my default action...";  // Legacy Code
+
+            return View();
+
         }
 
 
