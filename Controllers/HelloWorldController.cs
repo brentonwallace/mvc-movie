@@ -17,7 +17,7 @@ namespace mvc_movie.Controllers
 
         public IActionResult Index()
         {
-            //return "This is my default action...";  // Legacy Code
+            //return "This is my default action...";
 
             return View();
 
@@ -28,11 +28,13 @@ namespace mvc_movie.Controllers
         // GET: /HelloWorld/Welcome/
 
 
-        public string Welcome(string name, int ID = 1)
+        public IActionResult Welcome(string name, int ID = 1)
         {
             // return "This is the Welcome action method...";
-            return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");   // converts c# into html markup
-
+            // return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
+            ViewData["Message"] = "Hello " + name;
+            ViewData["ID"] = ID;
+            return View();
         }
 
         
