@@ -18,6 +18,8 @@ namespace mvc_movie
 
         public IConfiguration Configuration { get; }
 
+
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -25,6 +27,10 @@ namespace mvc_movie
             services.AddDbContext<MvcMovieContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext")));
         }
+
+
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
